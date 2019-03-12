@@ -24,12 +24,39 @@ class Profile {
     this.postLinks = [];
     this.postData = {};
   }
+  async getPostData() {
+    if (this.postLinks.length >= 1) {
+      const browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      const posts = new Set(this.postLinks.splice(0,10));
+      let postMeta = {};
+      for (const url of posts) {
+        await page.goto(url);
+        let data = await page.evaluate(() => {
+          let postContent = document.querySelectorAll("meta")[6].content;
+          postContent = postContent.replace(/,/g, "");
+          let postSplit = postContent.split(" ");
+          return{
+            likes:postSplit[0],
+            comments:postSplit[2]
+          }
+        });
+        this.postData[url] = {
+          likes: data.likes,
+          comments: data.comments
+        }
+      }
+    } else {
+      console.log("no posts")
+    }
+  }
   async getMetaData() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto("https://www.instagram.com/" + this.username);
-    let data = await page.evaluate(e => {
-      const meta = document.querySelectorAll("meta")[16].content;
+    let data = await page.evaluate(() => {
+      let meta = document.querySelectorAll("meta")[16].content;
+      meta = meta.replace(/,/g, "");
       const postLinks = document.querySelectorAll(".kIKUG a");
       const linkArray = [];
       Array.from(postLinks).forEach(link => {
@@ -51,11 +78,13 @@ class Profile {
   }
 }
 
-let prof = new Profile("coding");
+let prof = new Profile("selenagomez");
 prof
   .getMetaData()
   .then(() => {
-    console.log(prof);
+    prof.getPostData().then(()=>{
+      console.log(prof)
+    })
   })
   .catch(err => {
     console.log(err);
