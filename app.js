@@ -23,7 +23,6 @@ app.get("/api", (req, res) => {
   res.end();
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log("up and running at " + port);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("up and running");
 });
