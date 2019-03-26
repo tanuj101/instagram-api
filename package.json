@@ -1,21 +1,22 @@
 {
-  "name": "marketalo-scapper-api",
+  "name": "instagram-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js"
+    "start": "node index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "commander": "^2.19.0",
     "express": "^4.16.4",
     "puppeteer": "^1.13.0"
   },
-  "engines":{
-  	"node":"10.15.1",
-	"npm":"6.4.1"
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.4.1"
   }
 }

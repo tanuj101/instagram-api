@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const program = require('commander');
+const instagramScrapper = require('./lib/app.js').getData;
+program.arguments('<username>').action(async username=>{
+	let json = await instagramScrapper(username);
+	return
+}).parse(process.argv);
