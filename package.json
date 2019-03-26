@@ -5,9 +5,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node app.js"
   },
-  "author": "",
+  keywords:[
+    "instagram api",
+    "instagram post data api",
+    "instagram scrapper api"
+  ],
+  "author": {
+    "name": "Tanuj Nagpal",
+    "email": "tanujnagpal999@gmail.com",
+    "url": "www.github.com/Tanuj69"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Tanuj69/instagram-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tanuj69/instagram-api/issues"
+  },
   "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
     "body-parser": "^1.18.3",
