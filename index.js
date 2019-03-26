@@ -1,6 +1,7 @@
-const Profile = require("./lib/index.js");
+const Profile = require("./lib/app.js");
 const express = require("express");
 const app = express();
+
 
 app.get("/api/:username", (req, res) => {
   let profile = new Profile(req.params.username);
@@ -26,3 +27,5 @@ app.get("/api", (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log("up and running");
 });
+
+exports.scrapper=Profile
