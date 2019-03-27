@@ -6,8 +6,6 @@
 > A simple Promise based Instagram scrapper
 
 
-<br>
-
 ###  Try it out now
 
 ```
@@ -22,15 +20,17 @@ Clone the repo then,
 
 ## Installation
 ```sh
-$ npm install instagram-api --save
+$ npm install instagram-public-api --save
 ```
  
 ## Usage
 
   ```js
-  const myScrapper = require('instagram-api')
+  const myScrapper = require('instagram-public-api')
   ```
-  #### To get information of 10 latest posts of a user
+  
+#### To get information of 10 latest posts of a user
+
   ```js
   myScrapper.getPostData("salenagomez").then(data=>{
 console.log(data)
@@ -69,14 +69,14 @@ console.log(data)
    } 
  }
 ```
-
-  #### To get Meta data 
+#### To get Meta data 
+ 
   ```js
   myScrapper.MetaDataScrapper("selenagomez").then(data=>{
 	console.log(data)
 	})
   ```
-  #### Output
+#### Output
   ```
   {
   username: 'selenagomez',
@@ -99,7 +99,9 @@ console.log(data)
   postData: {} }
   ```
 
-  #### Feel free to contribute or raise issues !
+
+####  Feel free to contribute or raise issues !
+  
   
 ## License
 GPL-V2 © [Tanuj Nagpal](www.github.com/Tanuj69)
