@@ -17,6 +17,10 @@ https://mighty-depths-56624.herokuapp.com/api/[username]
 ## Use it in your command-line !
 Clone the repo then,
 ```sh
+npm install
+```
+
+```sh
 ./instagram [username]
 ```
 
