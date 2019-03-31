@@ -1,9 +1,14 @@
 
-# instagram-api
+# Instagram-public-api
 
   
 
-> A simple Promise based Instagram scrapper
+> A simple Promise based Instagram scrapper to get the following details as JSON object-
+
+* No. of followers
+* No. of following
+* No. of posts
+* No. of likes and comments on latest 10 posts
 
 
 ###  Try it out now
