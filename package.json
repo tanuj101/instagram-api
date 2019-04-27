@@ -1,6 +1,6 @@
 {
   "name": "instagram-public-api",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,9 @@
   },
   "keywords":[
     "instagram api",
-    "instagram post data api",
+    "public instagram api",
     "instagram scrapper api",
-    "public instagram api"
+    "instagram scrapper"
   ],
   "author": {
     "name": "Tanuj Nagpal",
