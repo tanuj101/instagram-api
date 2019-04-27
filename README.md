@@ -81,7 +81,7 @@ console.log(data)
 #### To get Meta data 
  
   ```js
-  myScrapper.MetaDataScrapper("selenagomez").then(data=>{
+  myScrapper.getMetaData("selenagomez").then(data=>{
 	console.log(data)
 	})
   ```
