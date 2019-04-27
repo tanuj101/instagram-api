@@ -1,9 +1,7 @@
 
 # Instagram-public-api
 
-  
-
-> A simple Promise based Instagram scrapper to get the following details as JSON object-
+> A simple Instagram module to get a user's :-
 
 * No. of followers
 * No. of following
@@ -35,14 +33,14 @@ $ npm install instagram-public-api --save
 ## Usage
 
   ```js
-  const myScrapper = require('instagram-public-api')
+  const myApi = require('instagram-public-api')
   ```
   
 #### To get information of 10 latest posts of a user
 
   ```js
-  myScrapper.getPostData("salenagomez").then(data=>{
-console.log(data)
+  myApi.getPostData("selenagomez").then(data=>{
+		---Do your stuff---
 })
   ```
 #### Output
@@ -109,7 +107,7 @@ console.log(data)
   postData: {} }
   ```
   
-### If you're working with this API on a Linux server
+### If you're working with this API on a Ubuntu server
 ```sh
 sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
