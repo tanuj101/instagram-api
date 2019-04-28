@@ -1,8 +1,13 @@
--> # Instagram-public-api
-[![npm version](https://badge.fury.io/js/instagram-public-api.svg)](https://badge.fury.io/js/instagram-public-api)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![npm downloads](https://img.shields.io/npm/dy/instagram-public-api.svg)]
-> A simple Instagram module to get a user's :- <-
+
+<p align="center"><font size="40px"> Instagram-api </font></p>
+<p align="center">
+<img src="https://img.shields.io/npm/v/instagram-public-api.svg">
+<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
+<img src="https://img.shields.io/npm/dt/instagram-public-api.svg">
+<img src="https://img.shields.io/github/license/tanuj69/instagram-api.svg">
+</p>
+
+> A simple Instagram module to get a user's :-
 * No. of followers
 * No. of following
 * No. of posts
