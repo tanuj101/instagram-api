@@ -1,5 +1,5 @@
-<p style="font-size=34px">Instagram Api </p>
-<p align="center">
+# Instagram Api
+<p align="left">
 <img src="https://img.shields.io/npm/v/instagram-public-api.svg">
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
 <img src="https://img.shields.io/npm/dt/instagram-public-api.svg">
