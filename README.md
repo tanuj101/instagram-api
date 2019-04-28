@@ -1,11 +1,8 @@
-
-<p style="text-align: center;"> # Instagram-public-api
+-> # Instagram-public-api
 [![npm version](https://badge.fury.io/js/instagram-public-api.svg)](https://badge.fury.io/js/instagram-public-api)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![npm downloads](https://img.shields.io/npm/dy/instagram-public-api.svg)]
-</p>
-> A simple Instagram module to get a user's :-
-
+> A simple Instagram module to get a user's :- <-
 * No. of followers
 * No. of following
 * No. of posts
