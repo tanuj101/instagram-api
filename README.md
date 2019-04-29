@@ -4,7 +4,6 @@
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
 <img src="https://img.shields.io/npm/dt/instagram-public-api.svg">
 <img src="https://img.shields.io/github/license/tanuj69/instagram-api.svg">
-<img src="https://www.codetriage.com/tanuj69/instagram-api/badges/users.svg">
 </p>
 
 > A simple Instagram module to get a user's :-
@@ -84,7 +83,7 @@ $ npm install instagram-public-api --save
 #### To get Meta data 
  
   ```js
-  myScrapper.getMetaData("selenagomez").then(data=>{
+  myApi.getMetaData("selenagomez").then(data=>{
 	console.log(data)
 	})
   ```
