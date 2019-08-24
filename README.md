@@ -1,127 +1,78 @@
-# Instagram Api
-<p align="left">
-<img src="https://img.shields.io/npm/v/instagram-public-api.svg">
-<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
-<img src="https://img.shields.io/npm/dt/instagram-public-api.svg">
-<img src="https://img.shields.io/github/license/tanuj69/instagram-api.svg">
-</p>
+
+<h1> Instagram Api for Public profiles <sup>v2</sup></h1>
+
+
+![enter image description here](https://img.shields.io/npm/v/instagram-public-api.svg) ![](https://badges.frapsoft.com/os/v1/open-source.svg?v=102) ![enter image description here](https://img.shields.io/npm/dt/instagram-public-api.svg) ![](https://img.shields.io/github/license/tanuj69/instagram-api.svg)
 
 > A simple Instagram module to get a user's :-
-* No. of followers
-* No. of following
-* No. of posts
-* No. of likes and comments on latest 10 posts
+ 1. Biography
+ 2. Number of Followers
+ 3. Number of Followings
+ 4. Profile Picture thumbnail URL
+ 5. Profile Picture HD URL
+ 6. Each post object will contain
+	1. Dimensions of Image
+    2. Image's URL in HD
+    3. Image's thumbnail URL
+    4. Number of Likes
+    5. Number of Comments
+    6. URL of the POST
 
+  
 
-###  Try it out now
-
+### Try it out now (Warning: Host URL might be sleeping just wait a little after making a request)
 ```
 https://mighty-depths-56624.herokuapp.com/api/[username]
 ```
-
-## Use it in your command-line !
-Clone the repo then,
-```sh
-npm install
-```
-
-```sh
-./instagram [username]
-```
+>Note- Enter username without ```[]```  
 
 ## Installation
 ```sh
-$ npm install instagram-public-api --save
+npm install instagram-public-api
 ```
- 
+
+  
+
 ## Usage
-
-  ```js
-  const myApi = require('instagram-public-api')
-  ```
-  
-#### To get information of 10 latest posts of a user
-
-  ```js
-  myApi.getPostData("selenagomez").then(data=>{
-		---Do your stuff---
+```js
+const  Profile  =  require("instagram-public-api");
+const user = new Profile("selenagomez");
+user.getData().then(data=>{
+	---Do your Stuff---
 })
-  ```
-#### Output
 ```
-{username: 'selenagomez',
-  followers: 147800000,
-  following: 59,
-  noOfPosts: 1478,
-  postLinks:
-   [ 'https://www.instagram.com/p/BvSAdFYAEau/',
-     'https://www.instagram.com/p/Bu6um0bg4c2/',
-     'https://www.instagram.com/p/BuuOdfrgu3t/',
-     'https://www.instagram.com/p/BucOYdPAttg/',
-     'https://www.instagram.com/p/Bubv5TggD0v/',
-     'https://www.instagram.com/p/Bt35UNMAhm7/',
-     'https://www.instagram.com/p/BtxEL1EgbYa/',
-     'https://www.instagram.com/p/BtBuE0Hg-6j/',
-     'https://www.instagram.com/p/Bsqa7_GgJif/',
-     'https://www.instagram.com/p/BsoZalUA8HZ/',
-     'https://www.instagram.com/p/BoFlrM7gwnK/',
-     'https://www.instagram.com/p/BoBdx-Ng9JC/' ],
-  postData:
-   { 'https://www.instagram.com/p/BvSAdFYAEau/': { likes: 5800000, comments: 52700 },
-     'https://www.instagram.com/p/Bu6um0bg4c2/': { likes: 5400000, comments: 43800 },
-     'https://www.instagram.com/p/BuuOdfrgu3t/': { likes: 3900000, comments: 34600 },
-     'https://www.instagram.com/p/BucOYdPAttg/': { likes: 1900000, comments: 30600 },
-     'https://www.instagram.com/p/Bubv5TggD0v/': { likes: 9000000, comments: 94200 },
-     'https://www.instagram.com/p/Bt35UNMAhm7/': { likes: 6100000, comments: 68700 },
-     'https://www.instagram.com/p/BtxEL1EgbYa/': { likes: 14200000, comments: 138300 },
-     'https://www.instagram.com/p/BtBuE0Hg-6j/': { likes: 10100000, comments: 94200 },
-     'https://www.instagram.com/p/Bsqa7_GgJif/': { likes: 7600000, comments: 85300 },
-     'https://www.instagram.com/p/BsoZalUA8HZ/': { likes: 9000000, comments: 178400 } 
-   } 
- }
+## Output
+```js
+{
+  "username": "selenagomez",
+  "url": "https://www.instagram.com/selenagomez",
+  "bio": "Light, space, zest -that’s God. With him on my side I’m FEARLESS, afraid of no one and nothing. A21 global anti human trafficking organization A21.org",
+  "followers": 155698399,
+  "following": 61,
+  "totalPosts": 1506,
+  "posts": [
+    {
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "imageURL": "https://instagram.fdel1-1.fna.fbcdn.net/vp/e522acfad3fd3c4091ea88a5b8479888/5E0C70E1/t51.2885-15/e35/s1080x1080/66656269_1648697008594563_8361695703211281609_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net",
+      "likes": 3956372,
+      "comments": 24986,
+      "url": "https://instagram.com/p/B1WxkKfDpQy",
+      "imageThumbnail": "https://instagram.fdel1-1.fna.fbcdn.net/vp/c72416cc9678de364449ab8f37793a0d/5DDDA525/t51.2885-15/sh0.08/e35/s640x640/66656269_1648697008594563_8361695703211281609_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net"
+    }
+  ],
+  "profilePicThumb": "https://instagram.fdel1-1.fna.fbcdn.net/vp/b104c292ae8e59d902586c2107a39a72/5DF2E637/t51.2885-19/s150x150/52780205_395221154575465_269834356913078272_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net",
+  "profilePicHD": "https://instagram.fdel1-1.fna.fbcdn.net/vp/073c225007a67fa0563350a2441f0053/5DFDDF3A/t51.2885-19/s320x320/52780205_395221154575465_269834356913078272_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net"
+}
 ```
-#### To get Meta data 
- 
-  ```js
-  myApi.getMetaData("selenagomez").then(data=>{
-	console.log(data)
-	})
-  ```
+See full output [here](https://pastebin.com/7GT98pNa)
+  
+#### Feel free to contribute or raising issues.
 
-#### Output
-  ```
-  {
-  username: 'selenagomez',
-  followers: 147800000,
-  following: 59,
-  noOfPosts: 1478,
-  postLinks:
-   [ 'https://www.instagram.com/p/BvSAdFYAEau/',
-     'https://www.instagram.com/p/Bu6um0bg4c2/',
-     'https://www.instagram.com/p/BuuOdfrgu3t/',
-     'https://www.instagram.com/p/BucOYdPAttg/',
-     'https://www.instagram.com/p/Bubv5TggD0v/',
-     'https://www.instagram.com/p/Bt35UNMAhm7/',
-     'https://www.instagram.com/p/BtxEL1EgbYa/',
-     'https://www.instagram.com/p/BtBuE0Hg-6j/',
-     'https://www.instagram.com/p/Bsqa7_GgJif/',
-     'https://www.instagram.com/p/BsoZalUA8HZ/',
-     'https://www.instagram.com/p/BoFlrM7gwnK/',
-     'https://www.instagram.com/p/BoBdx-Ng9JC/' ],
-  postData: {} }
-  ```
-  
-### If you're working with this API on a Ubuntu server
-```sh
-sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
-libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
-libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
-libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \
-ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
-```
-
-####  Feel free to contribute or raise issues !
-  
-  
 ## License
+
+  
+
 GPL-V2 © [Tanuj Nagpal](www.github.com/Tanuj69)
