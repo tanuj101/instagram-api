@@ -1,1 +1,1 @@
-exports.Profile = require("./lib/Profile");
+exports.Profile = require("./lib/Profile").Profile;
