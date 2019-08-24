@@ -1,39 +1,39 @@
+
 <h1> Instagram Api for Public profiles <sup>v2</sup></h1>
+
 
 ![enter image description here](https://img.shields.io/npm/v/instagram-public-api.svg) ![](https://badges.frapsoft.com/os/v1/open-source.svg?v=102) ![enter image description here](https://img.shields.io/npm/dt/instagram-public-api.svg) ![](https://img.shields.io/github/license/tanuj69/instagram-api.svg)
 
 > A simple Instagram module to get a user's :-
-
-1.  Biography
-2.  Number of Followers
-3.  Number of Followings
-4.  Profile Picture thumbnail URL
-5.  Profile Picture HD URL
-6.  Each post object will contain
-    1. Dimensions of Image
+ 1. Biography
+ 2. Number of Followers
+ 3. Number of Followings
+ 4. Profile Picture thumbnail URL
+ 5. Profile Picture HD URL
+ 6. Each post object will contain
+	1. Dimensions of Image
     2. Image's URL in HD
     3. Image's thumbnail URL
     4. Number of Likes
     5. Number of Comments
     6. URL of the POST
 
-### Try it out now (Warning: Host URL might be sleeping just wait a little after making a request)
+  
 
+### Try it out now (Warning: Host URL might be sleeping just wait a little after making a request)
 ```
 https://mighty-depths-56624.herokuapp.com/api/[username]
-
 ```
-
-> Note- Enter username without `[]`
+>Note- Enter username without ```[]```  
 
 ## Installation
-
 ```sh
 npm install instagram-public-api
 ```
 
-## Usage
+  
 
+## Usage
 ```js
 const  Profile  =  require("instagram-public-api");
 const user = new Profile("selenagomez");
@@ -41,9 +41,7 @@ user.getData().then(data=>{
 	---Do your Stuff---
 })
 ```
-
 ## Output
-
 ```js
 {
   "username": "selenagomez",
@@ -69,11 +67,12 @@ user.getData().then(data=>{
   "profilePicHD": "https://instagram.fdel1-1.fna.fbcdn.net/vp/073c225007a67fa0563350a2441f0053/5DFDDF3A/t51.2885-19/s320x320/52780205_395221154575465_269834356913078272_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net"
 }
 ```
-
 See full output [here](https://pastebin.com/7GT98pNa)
-
+  
 #### Feel free to contribute or raising issues.
 
 ## License
+
+  
 
 GPL-V2 © [Tanuj Nagpal](www.github.com/Tanuj69)
