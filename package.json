@@ -1,6 +1,6 @@
 {
   "name": "instagram-public-api",
-  "version": "1.0.7",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,8 +30,8 @@
     "body-parser": "^1.19.0",
     "commander": "^2.20.0",
     "express": "^4.17.1",
-    "jest": "^24.9.0",
-    "puppeteer": "^1.19.0"
+    "axios": "^0.19.0",
+    "jsdom": "^15.1.1"
   },
   "engines": {
     "node": "10.15.1",
