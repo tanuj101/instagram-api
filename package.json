@@ -1,6 +1,10 @@
 {
   "name": "instagram-public-api",
+<<<<<<< HEAD
   "version": "2.0.2",
+=======
+  "version": "2.0.1",
+>>>>>>> 2ef33bf3ad51cd60b4102f4518ccaf70215b1d11
   "description": "",
   "main": "index.js",
   "scripts": {
