@@ -1,18 +1,20 @@
-const Profile = require("./lib/app.js");
+const Profile = require("./lib/Profile.js");
 const express = require("express");
 const app = express();
-
 app.get("/api/:username", async (req, res) => {
-  let profile = new Profile(req.params.username);
-  let data = await profile.getMetaData();
-  res.json(data).end();
+  let NewProfile = new Profile(req.params.username);
+  try {
+    let d = await NewProfile.getData();
+    return res.json(d).end();
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send(error.message);
+  }
 });
-app.get("/api", (req, res) => {
-  res.status(400);
-  res.send("Username cannot be empty");
-  res.end();
+app.get("/api/", (req, res) => {
+  res.status(400).send("Username can't be empty");
 });
-// config buildpacks
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("up and running");
 });

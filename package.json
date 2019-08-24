@@ -1,10 +1,10 @@
 {
   "name": "instagram-public-api",
-  "version": "1.0.7",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles",
     "start": "node app.js"
   },
   "keywords": [
@@ -16,7 +16,7 @@
   "author": {
     "name": "Tanuj Nagpal",
     "email": "tanujnagpal999@gmail.com",
-    "url": "www.github.com/Tanuj69"
+    "url": "https://www.github.com/Tanuj69"
   },
   "repository": {
     "type": "git",
@@ -27,10 +27,11 @@
   },
   "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "commander": "^2.19.0",
-    "express": "^4.16.4",
-    "puppeteer": "^1.13.0"
+    "body-parser": "^1.19.0",
+    "commander": "^2.20.0",
+    "express": "^4.17.1",
+    "axios": "^0.19.0",
+    "jsdom": "^15.1.1"
   },
   "engines": {
     "node": "10.15.1",
