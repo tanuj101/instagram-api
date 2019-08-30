@@ -1,5 +1,5 @@
 import axios from 'axios';
-import parser from 'jsdom';
+import * as parser from 'jsdom';
 import { UserInfo } from './interfaces';
 const { JSDOM } = parser;
 
