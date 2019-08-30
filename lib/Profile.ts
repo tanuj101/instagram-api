@@ -1,5 +1,6 @@
 import axios from 'axios';
 import parser from 'jsdom';
+import { UserInfo } from './interfaces';
 const { JSDOM } = parser;
 
 class Profile {
@@ -9,7 +10,7 @@ class Profile {
   followers = 0;
   following = 0;
   totalPosts = 0;
-  posts = [];
+  posts : UserInfo['edge_owner_to_timeline_media']['edges'][0]['node'][] = [];
   profilePicThumb = "";
   profilePicHD = "";
 
@@ -21,8 +22,8 @@ class Profile {
     // if()return Promise
     const document = new JSDOM(page.data, { runScripts: "dangerously" });
     // console.log(document.window._sharedData.entry_data);
-    const userInfo =
-      document.window._sharedData.entry_data.ProfilePage[0].graphql.user;
+    const userInfo: UserInfo =
+      (document as any).window._sharedData.entry_data.ProfilePage[0].graphql.user;
     this.bio = userInfo.biography;
     this.following = userInfo.edge_follow.count;
     this.followers = userInfo.edge_followed_by.count;
@@ -34,15 +35,16 @@ class Profile {
     this.totalPosts = postData.count;
     for (let i = 0; i < posts.length; i++) {
       let post = posts[i].node;
-      const data = {
-        dimensions: post.dimensions,
-        imageURL: post.display_url,
-        likes: post.edge_liked_by.count,
-        comments: post.edge_media_to_comment.count,
-        url: `https://instagram.com/p/${post.shortcode}`,
-        imageThumbnail: post.thumbnail_src
-      };
-      this.posts.push(data);
+      this.posts.push(post);
+      // const data = {
+      //   dimensions: post.dimensions,
+      //   imageURL: post.display_url,
+      //   likes: post.edge_liked_by.count,
+      //   comments: post.edge_media_to_comment.count,
+      //   url: `https://instagram.com/p/${post.shortcode}`,
+      //   imageThumbnail: post.thumbnail_src
+      // };
+      // this.posts.push(data);
     }
     return this;
   }

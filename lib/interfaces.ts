@@ -7,7 +7,7 @@ export interface PostData {
     imageThumbnail: any;
 }
 
-export interface UserInfo {
+export interface UserInfo extends EdgeData {
     biography: string
     blocked_by_viewer: boolean
     business_category_name: null
@@ -33,7 +33,7 @@ export interface UserInfo {
     username: string
 }
 
-interface ExternalData {
+interface EdgeData {
     edge_felix_combined_draft_uploads: {
         count: number
         edges: []
@@ -87,7 +87,7 @@ interface ExternalData {
     }
     edge_owner_to_timeline_media: {
         count: number
-        edges: {
+        edges: Array<{
             node: {
                 comments_disabled: boolean
                 dimensions: { height: number, width: number }
@@ -120,7 +120,7 @@ interface ExternalData {
                 video_view_count: number
                 __typename: string
             }
-        }[]
+        }>
         page_info: {
             end_cursor: string
             has_next_page: boolean
