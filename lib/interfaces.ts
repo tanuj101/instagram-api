@@ -117,7 +117,7 @@ interface ExternalData {
                     src: string
                 }>
                 thumbnail_src: string
-                video_view_count: 336
+                video_view_count: number
                 __typename: string
             }
         }[]
@@ -127,7 +127,7 @@ interface ExternalData {
         }
     }
     edge_saved_media: {
-        count: 146
+        count: number
         edges: {
             node: {
                 accessibility_caption: string
@@ -143,7 +143,7 @@ interface ExternalData {
                         }
                     }>
                 }
-                edge_media_to_comment: { count: 194 }
+                edge_media_to_comment: { count: number }
                 gating_info: null
                 id: string
                 is_video: boolean
