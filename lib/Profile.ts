@@ -3,7 +3,7 @@ import parser from 'jsdom';
 import { UserInfo } from './interfaces';
 const { JSDOM } = parser;
 
-class Profile {
+export class Profile {
 
   url = `https://www.instagram.com/${this.username}`;
   bio = "";
@@ -50,5 +50,3 @@ class Profile {
   }
 
 }
-
-export default Profile;
