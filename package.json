@@ -2,10 +2,12 @@
   "name": "instagram-public-api",
   "version": "2.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "tsc",
+    "test": "ts-node ./test/index.ts",
+    "prepublishOnly": "npm run test && tsc"
   },
   "keywords": [
     "instagram api",
@@ -35,5 +37,12 @@
   "engines": {
     "node": "10.15.1",
     "npm": "6.4.1"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^12.2.4",
+    "@types/node": "^12.7.3",
+    "ts-node": "^8.3.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.2"
   }
 }
