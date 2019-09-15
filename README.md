@@ -8,45 +8,17 @@ To use CLI mode install like:-
 
 `npm install -g instagram-public-api`
 
-> A simple Instagram module to get a user's :-
+Options available -
 
-1. Biography
+`-D to download media, -m to see info and -h for help`
 
-2. Number of Followers
-
-3. Number of Followings
-
-4. Profile Picture thumbnail URL
-
-5. Profile Picture HD URL
-
-6. Each post object will contain
-
-   1. Dimensions of Image
-
-   2. Image's URL in HD
-
-   3. Image's thumbnail URL
-
-   4. Number of Likes
-
-   5. Number of Comments
-
-   6. URL of the POST
-
-## Installation
+### Alternatively install it as dependency 
 
 ```sh
 
 npm install instagram-public-api
 
 ```
-
-## Test it online!
-
-https://npm.runkit.com/instagram-public-api
-
-![enter image description here](https://i.imgur.com/uBTIpe3.png)
 
 ## Usage
 
@@ -63,6 +35,13 @@ user.getData().then(data=>{
 })
 
 ```
+
+## Test it online!
+
+https://npm.runkit.com/instagram-public-api
+
+![enter image description here](https://i.imgur.com/uBTIpe3.png)
+
 
 ## Output
 
