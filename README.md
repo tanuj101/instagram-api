@@ -1,13 +1,13 @@
-
 <h1> Instagram Api for Public profiles <sup>v2</sup></h1>
-
-  
 
 ![npm version](https://img.shields.io/npm/v/instagram-public-api.svg) ![open source <3](https://badges.frapsoft.com/os/v1/open-source.svg?v=102) ![No. of downloads](https://img.shields.io/npm/dt/instagram-public-api.svg) ![License](https://img.shields.io/github/license/tanuj69/instagram-api.svg)
 
-  
-> A simple Instagram module to get a user's :-
+![working of instaget](https://i.imgur.com/banFSoP.gif)
+To use CLI mode install like:-
 
+`npm install -g instagram-public-api`
+
+> A simple Instagram module to get a user's :-
 
 1. Biography
 
@@ -21,23 +21,19 @@
 
 6. Each post object will contain
 
-	1. Dimensions of Image
+   1. Dimensions of Image
 
-	2. Image's URL in HD
+   2. Image's URL in HD
 
-	3. Image's thumbnail URL
+   3. Image's thumbnail URL
 
-	4. Number of Likes
+   4. Number of Likes
 
-	5. Number of Comments
+   5. Number of Comments
 
-	6. URL of the POST
-
-  
+   6. URL of the POST
 
 ## Installation
-
-  
 
 ```sh
 
@@ -45,18 +41,13 @@ npm install instagram-public-api
 
 ```
 
-  
-
 ## Test it online!
 
 https://npm.runkit.com/instagram-public-api
 
 ![enter image description here](https://i.imgur.com/uBTIpe3.png)
 
-
 ## Usage
-
-  
 
 ```js
 
@@ -72,11 +63,7 @@ user.getData().then(data=>{
 
 ```
 
-  
-
 ## Output
-
-  
 
 ```js
 
@@ -128,18 +115,10 @@ user.getData().then(data=>{
 
 ```
 
-  
-
 See full output [here](https://pastebin.com/7GT98pNa)
-
-  
 
 #### Feel free to contribute or raising issues.
 
-  
-
 ## License
-
-  
 
 GPL-V2 © [Tanuj Nagpal](www.github.com/Tanuj69)
