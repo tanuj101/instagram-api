@@ -67,7 +67,7 @@ const fetchProfile = () => {
   logUpdate();
   spinner.text = "Fetching Profile";
 };
-const argArray = ["-m", "--meta", "-D", "--download"];
+const argArray = ["-m", "--meta", "-D", "--download", "-f", "--full"];
 if (!arg || arg === "-h" || arg === "--help" || argArray.indexOf(arg) === -1) {
   console.log(`
  ${chalk.cyan("Usage")} : instaget ${chalk.cyan("[command]")} ${chalk.white(
@@ -77,10 +77,14 @@ if (!arg || arg === "-h" || arg === "--help" || argArray.indexOf(arg) === -1) {
   -m, ${dim(
     "--meta"
   )}  Get info like number of following,followers,Profile picture link etc.
+  -f, ${dim(
+    "--full"
+  )}  Get all info in table format.
   -D, ${dim(
     "--download"
   )}  Download all available media (Profile picture, latest 12 posts ) \n
  ${chalk.cyan("Example")} : instaget -m selenagomez
+           instaget -f selenagomez
            instaget -D selenagomez
   `);
   end(1);
@@ -150,6 +154,19 @@ if (arg == "-m" || arg == "--meta") {
       errorMessage();
     });
 }
-if (arg == "-m" || arg == "--meta") {
+if (arg == "-f" || arg == "--full") {
+  fetchProfile();
   returnBase();
+  const pro = new prof(user);
+  pro
+    .getData()
+    .then(data => {
+      spinner.stop();
+      console.table([data], ["username", "bio", "followers", "following", "totalPosts", "url"])
+      console.table(data.posts, ["dimensions", "likes", "comments", "url"])
+    })
+    .catch(err => {
+      console.log(err);
+      errorMessage();
+    });
 }
