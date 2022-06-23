@@ -39,7 +39,7 @@
     "got": "^9.6.0",
     "image-downloader": "^3.5.0",
     "is-url": "^1.2.4",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "log-update": "^3.3.0",
     "ora": "^3.4.0",
     "update-notifier": "^3.0.1"
