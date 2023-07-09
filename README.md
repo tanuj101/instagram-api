@@ -1,5 +1,5 @@
 <h1> Instagram Api for Public profiles <sup>v2</sup></h1>
-[!WARNING]: This repo is not maintained anymore
+**[!WARNING]**: This repo is not maintained anymore<br>
 ![npm version](https://img.shields.io/npm/v/instagram-public-api.svg) ![open source <3](https://badges.frapsoft.com/os/v1/open-source.svg?v=102) ![No. of downloads](https://img.shields.io/npm/dt/instagram-public-api.svg) ![License](https://img.shields.io/github/license/tanuj69/instagram-api.svg)
 
 ![working of instaget](https://i.imgur.com/banFSoP.gif)
